@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.appointmentscreen">
+   <children>
+      <TableView fx:id="appointmentTable" layoutX="27.0" layoutY="85.0" prefHeight="237.0" prefWidth="953.0">
+        <columns>
+          <TableColumn fx:id="idCol" prefWidth="38.0" text="ID" />
+          <TableColumn fx:id="titleCol" prefWidth="106.0" text="Title" />
+            <TableColumn fx:id="descriptionCol" prefWidth="123.0" text="Description" />
+            <TableColumn fx:id="locationCol" prefWidth="98.0" text="Location" />
+            <TableColumn fx:id="contactCol" prefWidth="99.0" text="Contact" />
+            <TableColumn fx:id="typeCol" prefWidth="87.0" text="Type" />
+            <TableColumn fx:id="startCol" prefWidth="138.0" text="Start Date / Start Time" />
+            <TableColumn fx:id="endCol" prefWidth="130.0" text="End Date / End Time" />
+            <TableColumn fx:id="customerIDCol" prefWidth="81.0" text="Customer ID" />
+            <TableColumn fx:id="userIDCol" prefWidth="52.0" text="User ID" />
+        </columns>
+      </TableView>
+      <Button layoutX="59.0" layoutY="342.0" mnemonicParsing="false" onAction="#onClickAdd" prefHeight="25.0" prefWidth="54.0" text="Add" />
+      <Button layoutX="142.0" layoutY="342.0" mnemonicParsing="false" onAction="#onClickModify" text="Modify" />
+      <Button layoutX="226.0" layoutY="342.0" mnemonicParsing="false" onAction="#onClickDelete" prefHeight="25.0" prefWidth="54.0" text="Delete" />
+      <Button layoutX="926.0" layoutY="342.0" mnemonicParsing="false" onAction="#onClickCancel" prefHeight="25.0" prefWidth="54.0" text="Cancel" />
+      <Label layoutX="25.0" layoutY="25.0" text="Appointments">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="allRadio" layoutX="299.0" layoutY="30.0" mnemonicParsing="false" onAction="#onClickAllRadio" selected="true" text="All" />
+      <RadioButton fx:id="monthlyRadio" layoutX="354.0" layoutY="30.0" mnemonicParsing="false" onAction="#onClickMonthlyRadio" text="Monthly" />
+      <RadioButton fx:id="weeklyRadio" layoutX="456.0" layoutY="30.0" mnemonicParsing="false" onAction="#onClickWeeklyRadio" text="Weekly" />
+   </children>
+</AnchorPane>

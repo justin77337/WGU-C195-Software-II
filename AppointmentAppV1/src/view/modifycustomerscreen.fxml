@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="550.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.modifycustomerscreen">
+   <children>
+      <GridPane layoutX="60.0" layoutY="128.0" prefHeight="270.0" prefWidth="290.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="139.0" minWidth="10.0" prefWidth="118.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="172.0" minWidth="10.0" prefWidth="172.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="30.0" prefWidth="120.0" text="Customer Id">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label prefHeight="30.0" prefWidth="120.0" text="Customer Name" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label prefHeight="30.0" prefWidth="120.0" text="Phone Number" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label prefHeight="30.0" prefWidth="120.0" text="Address" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label prefHeight="30.0" prefWidth="120.0" text="Country" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label prefHeight="30.0" prefWidth="120.0" text="States/Provinces" GridPane.rowIndex="5">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label prefHeight="30.0" prefWidth="120.0" text="Postal Code" GridPane.rowIndex="6">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <TextField fx:id="idField" editable="false" prefHeight="30.0" prefWidth="210.0" GridPane.columnIndex="1" />
+            <TextField fx:id="nameField" prefHeight="30.0" prefWidth="210.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="phoneField" prefHeight="30.0" prefWidth="210.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="addressField" prefHeight="30.0" prefWidth="210.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <ComboBox fx:id="countryCombo" onAction="#comboSelection" prefHeight="30.0" prefWidth="210.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <ComboBox fx:id="provincesCombo" onAction="#comboSelection2" prefHeight="30.0" prefWidth="210.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="postalField" prefHeight="30.0" prefWidth="210.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+         </children>
+      </GridPane>
+      <Button layoutX="139.0" layoutY="432.0" mnemonicParsing="false" onAction="#onClickSave" prefHeight="25.0" prefWidth="52.0" text="Save" />
+      <Button layoutX="211.0" layoutY="432.0" mnemonicParsing="false" onAction="#onClickCancel" text="Cancel" />
+      <Label alignment="CENTER" layoutX="-1.0" layoutY="52.0" prefHeight="30.0" prefWidth="400.0" text="Modify Customer" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="hiddenID" layoutX="219.0" layoutY="480.0" visible="false" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.reportscreen">
+   <children>
+      <TableView fx:id="Table1" layoutX="14.0" layoutY="103.0" prefHeight="176.0" prefWidth="971.0">
+        <columns>
+          <TableColumn fx:id="t1_IDCol" prefWidth="45.0" text="ID" />
+          <TableColumn fx:id="t1_titleCol" prefWidth="148.0" text="Title" />
+            <TableColumn fx:id="t1_typeCol" prefWidth="141.0" text="Type" />
+            <TableColumn fx:id="t1_descriptionCol" prefWidth="245.0" text="Description" />
+            <TableColumn fx:id="t1_startDateTimeCol" prefWidth="154.0" text="Start Date / Start Time" />
+            <TableColumn fx:id="t1_endDateTimeCol" prefWidth="149.0" text="End Date / End Time" />
+            <TableColumn fx:id="t1_customerIDCol" prefWidth="88.0" text="Customer ID" />
+        </columns>
+      </TableView>
+      <TableView fx:id="Table2" layoutX="14.0" layoutY="328.0" prefHeight="235.0" prefWidth="315.0">
+        <columns>
+          <TableColumn fx:id="t2_typeCol" prefWidth="153.0" text="Appointment Type" />
+          <TableColumn fx:id="t2_totalCol" prefWidth="161.0" text="Total Appointments" />
+        </columns>
+      </TableView>
+      <Label layoutX="14.0" layoutY="33.0" text="Reports">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="944.0" layoutY="570.0" mnemonicParsing="false" onAction="#onClickBack" text="Back" />
+      <Label layoutX="15.0" layoutY="72.0" text="Appointments by Contact">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="300.0" text="Appointments by Type">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <TableView fx:id="Table3" layoutX="344.0" layoutY="328.0" prefHeight="235.0" prefWidth="315.0">
+        <columns>
+          <TableColumn fx:id="t3_monthsCol" prefWidth="161.0" text="Month" />
+          <TableColumn fx:id="t3_totalCol" prefWidth="153.0" text="Total Appointments" />
+        </columns>
+      </TableView>
+      <TableView fx:id="Table4" layoutX="671.0" layoutY="328.0" prefHeight="235.0" prefWidth="315.0">
+        <columns>
+          <TableColumn fx:id="t4_countryNameCol" prefWidth="164.0" text="Country" />
+          <TableColumn fx:id="t4_totalCol" minWidth="0.0" prefWidth="150.0" text="Total Appointments" />
+        </columns>
+      </TableView>
+      <Label layoutX="344.0" layoutY="300.0" text="Appointments by Months">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="671.0" layoutY="300.0" text="Appointments by Country">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <ComboBox fx:id="contactCombo" layoutX="836.0" layoutY="68.0" onAction="#onContactSelectionCombo" prefWidth="150.0" promptText="Select A Contact" />
+   </children>
+</AnchorPane>
